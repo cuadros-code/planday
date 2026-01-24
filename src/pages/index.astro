@@ -1,6 +1,7 @@
 ---
-import { Counter } from '../components/Calendar';
 import Welcome from '../components/Welcome.astro';
+import { Calendar } from '../components/calendar/Calendar';
+
 import Layout from '../layouts/Layout.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -8,6 +9,6 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-	<Counter client:only="solid-js"/>
+	<Calendar client:only="solid-js"/>
 	<Welcome />
 </Layout>
