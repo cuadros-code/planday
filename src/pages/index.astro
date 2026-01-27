@@ -1,14 +1,21 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import { Calendar } from '../components/calendar/Calendar';
-
+import { NewHabitModal } from '../components/new-habit-modal/NewHabitModal';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import EmptyPlan from '../components/empty-plan.astro';
 ---
 
 <Layout>
 	<Calendar client:only="solid-js"/>
-	<Welcome />
+	<EmptyPlan />
+	<NewHabitModal client:only="solid-js"/>
 </Layout>
+
+<script>
+import { logger } from '@nanostores/logger'
+import { isNewHabit } from '../store/new-habit.store'
+
+	logger({
+		'Profile': isNewHabit,
+	})
+</script>

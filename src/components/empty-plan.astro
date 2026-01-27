@@ -1,0 +1,46 @@
+---
+import Plus from '../assets/plus.svg';
+---
+
+<section>
+  <button id="new-habit">
+    <span>Add New Habit</span>
+    <Plus width={20} fill={'#FFF'}/>
+  </button>
+</section>
+
+<script>
+  import { isNewHabit } from "../store/new-habit.store";
+
+  const newHabitButton = document.getElementById('new-habit')
+  
+  newHabitButton?.addEventListener('click', () => {
+    isNewHabit.set(true)
+  })
+</script>
+
+<style>
+  section {
+    display: flex;
+    padding: 20px 15px;
+  }
+
+  button {
+    border-radius: 10px;
+    border: 1px solid #e1e1e1;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: transparent;
+    flex: 1;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.2s;
+  }
+
+  button:hover {
+    background-color: var(--primary-color-hover);
+    cursor: pointer;
+  }
+</style>

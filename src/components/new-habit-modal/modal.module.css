@@ -1,0 +1,9 @@
+
+.modal {
+  width: 80vh;
+  /* background-color: red; */
+}
+
+.modal::backdrop {
+  backdrop-filter: blur(1.2px);
+}
