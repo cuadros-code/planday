@@ -1,7 +1,7 @@
 
 .modal {
   width: 80vh;
-  /* background-color: red; */
+  border-radius: 15px;
 }
 
 .modal::backdrop {

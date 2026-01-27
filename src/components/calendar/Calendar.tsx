@@ -11,6 +11,7 @@ export const Calendar = () => {
     refDay?.scrollIntoView({
       inline: 'center',
       behavior: 'instant',
+      block: 'nearest',
     })
   })
 
@@ -18,7 +19,8 @@ export const Calendar = () => {
     setSelectedDate(elementId)
     document.getElementById(elementId)?.scrollIntoView({
       inline: 'center',
-      behavior: 'smooth'
+      behavior: 'smooth',
+      block: 'nearest',
     })
   }
 

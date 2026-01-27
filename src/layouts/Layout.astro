@@ -15,18 +15,24 @@
 
 <style is:global>
 	:root {
-		--primary-color-hover: #27185c;
+		--primary-color-hover: #a997e7;
 	}
-
+	html {
+		background-image: url(../assets/bg.svg);
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		-o-background-size: 100% 100%;
+		-webkit-background-size: 100% 100%;
+		background-size: cover;
+	}
 
 	html,
 	body {
 		margin: 0;
 		width: 100%;
 		height: 100%;
+		backdrop-filter: blur(12px);
 		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-		background-color: #1e1e1e;
-		color: #FFF;
 	}
 
 	button {
