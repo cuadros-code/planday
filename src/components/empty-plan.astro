@@ -3,8 +3,8 @@ import Plus from '../assets/plus.svg';
 ---
 
 <section>
-  <button id="new-habit">
-    <span>Add New Habit</span>
+  <button class="new-habit">
+    <span class="text-lx text-gray-700">Add New Habit</span>
     <Plus width={20} fill={'#FFF'}/>
   </button>
 </section>
@@ -12,10 +12,12 @@ import Plus from '../assets/plus.svg';
 <script>
   import { isNewHabit } from "../store/new-habit.store";
 
-  const newHabitButton = document.getElementById('new-habit')
-  
-  newHabitButton?.addEventListener('click', () => {
-    isNewHabit.set(true)
+  const newHabitButton = document.querySelectorAll('.new-habit')
+
+  newHabitButton.forEach( btn => {
+    btn.addEventListener('click', () => {
+      isNewHabit.set(true)
+    })
   })
 </script>
 

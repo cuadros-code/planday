@@ -14,16 +14,19 @@ export const NewHabitModal = () => {
     }
   });
 
+  const closeModal = () => {
+    isNewHabit.set(false)
+    modalRef.close();
+  }
+
 
   return(
     <dialog
-      class={`${styles.modal}`}
+      class={` ${styles.modal}`}
       ref={el => modalRef = el}
     >
       <p>I'm a dialog.</p>
-      <form method="dialog">
-        <button>Close</button>
-      </form>
+    <button onclick={closeModal}>Close</button>
     </dialog>
   )
 }
