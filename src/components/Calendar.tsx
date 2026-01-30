@@ -1,5 +1,5 @@
 import { createSignal, For, onMount, Show } from "solid-js";
-import { currentDayID, currentMonth, currentYear, dayInfo, MONTHS } from "../../utils/calendar.utils";
+import { currentDayID, currentMonth, currentYear, dayInfo, MONTHS } from "../utils/calendar.utils";
 
 export const Calendar = () => {
 
@@ -24,8 +24,8 @@ export const Calendar = () => {
   }
 
   return (
-    <div class='pt-5 w-full'>
-      <div class='relative flex items-center py-3 h-full'>
+    <div class='pt-2 w-full h-50'>
+      <div class='relative flex items-center py-3'>
         <p class='text-2xl font-bold relative text-center w-full'>
           {currentYear}
         </p>
@@ -47,9 +47,9 @@ export const Calendar = () => {
               accessKey={item.id}
               onclick={() => onSelectDate(item.id)}
               class={`
-                ${item.isCurrentDate && 'bg-sky-950 text-white font-semibold'} 
-                ${item.id === selectedDate() && !item.isCurrentDate && 'bg-sky-300'} 
-                flex rounded-xl flex-col list-none text-center p-3 cursor-pointer mx-2 hover:bg-sky-300
+                ${item.isCurrentDate && 'text-white font-semibold bg-gradient-to-tl from-blue-500  to-sky-950'} 
+                ${item.id === selectedDate() && !item.isCurrentDate && 'bg-gray-300'} 
+                flex rounded-xl flex-col list-none text-center p-3 cursor-pointer mx-2 hover:bg-gray-300
               `}
               ref={el => {
                 if (item.isCurrentDate) refDay = el

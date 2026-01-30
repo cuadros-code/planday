@@ -1,7 +1,6 @@
-import styles from './modal.module.css'
 import { useStore } from "@nanostores/solid";
-import { isNewHabit } from "../../store/new-habit.store";
 import { createEffect } from "solid-js";
+import { isNewHabit } from '../store/new-habit.store';
 
 export const NewHabitModal = () => {
 
@@ -22,7 +21,6 @@ export const NewHabitModal = () => {
 
   return(
     <dialog
-      class={` ${styles.modal}`}
       ref={el => modalRef = el}
     >
       <p>I'm a dialog.</p>

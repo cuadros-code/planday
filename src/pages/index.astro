@@ -1,16 +1,21 @@
 ---
-import { Calendar } from '../components/calendar/Calendar';
-import { NewHabitModal } from '../components/new-habit-modal/NewHabitModal';
 import Layout from '../layouts/Layout.astro';
-import EmptyPlan from '../components/empty-plan.astro';
+import { Calendar } from '../components/Calendar';
+import { NewHabitModal } from '../components/NewHabitModal';
+import { ToDoSection } from '../components/ToDoSection';
 ---
 
 <Layout>
-	<Calendar client:only="solid-js"/>
-	<EmptyPlan />
-	<EmptyPlan />
-	<NewHabitModal client:only="solid-js"/>
-
+	<div class="flex flex-col h-screen">
+		<div class="h-50 shrink-0">
+			<Calendar client:only="solid-js" />
+		</div>
+		<div class="flex-1 relative">
+			<ToDoSection />
+		</div>
+		
+		<NewHabitModal client:only="solid-js"/>
+	</div>
 </Layout>
 
 <script>
