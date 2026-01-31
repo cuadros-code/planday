@@ -47,7 +47,7 @@ export const Calendar = () => {
               accessKey={item.id}
               onclick={() => onSelectDate(item.id)}
               class={`
-                ${item.isCurrentDate && 'text-white font-semibold bg-gradient-to-tl from-blue-500  to-sky-950'} 
+                ${item.isCurrentDate && 'text-white font-semibold bg-indigo-950'} 
                 ${item.id === selectedDate() && !item.isCurrentDate && 'bg-gray-300'} 
                 flex rounded-xl flex-col list-none text-center p-3 cursor-pointer mx-2 hover:bg-gray-300
               `}
