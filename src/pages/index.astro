@@ -11,7 +11,7 @@ import { ToDoSection } from '../components/ToDoSection';
 			<Calendar client:only="solid-js" />
 		</div>
 		<div class="flex-1 relative">
-			<ToDoSection />
+			<ToDoSection client:only="solid-js"/>
 		</div>
 		
 		<NewHabitModal client:only="solid-js"/>
@@ -20,9 +20,9 @@ import { ToDoSection } from '../components/ToDoSection';
 
 <script>
 import { logger } from '@nanostores/logger'
-import { isNewHabit } from '../store/new-habit.store'
+import { menuState } from '../store/menu.store'
 
 	logger({
-		'Profile': isNewHabit,
+		'Profile': menuState,
 	})
 </script>
